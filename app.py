@@ -19,7 +19,8 @@ def home():
 
 @app.route('/site2')
 def site2():
-    data = [{
+    data = [
+        {
         "id":1
         ,"name":"name 1"
     }
@@ -31,7 +32,7 @@ def site2():
         "id":3
         ,"name":"name 3"
     }
-    }]
+    ]
     return render_template("site2.html", data=data)
 
 """ ----------------------------------------------------------------
