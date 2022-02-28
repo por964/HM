@@ -14,7 +14,7 @@ Routes:
 @app.route('/')
 def home():
     #return render_template("home.html", text="Dette er en hest!!!")
-    return redirect(url_for(home))
+    return redirect(url_for('site2'))
 
 
 @app.route('/site2')
