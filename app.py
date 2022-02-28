@@ -1,4 +1,4 @@
-from flask import Flask, render_template 
+from flask import Flask, render_template, redirect, url_for
 
 """ ----------------------------------------------------------------
 App Configuration:
@@ -13,7 +13,13 @@ Routes:
 -----------------------------------------------------------------""" 
 @app.route('/')
 def home():
-    return render_template("home.html", text="Dette er en hest!!!")
+    #return render_template("home.html", text="Dette er en hest!!!")
+    return redirect(url_for(home))
+
+
+@app.route('/site2')
+def home2():
+    return render_template("site2.html")
 
 
 """ ----------------------------------------------------------------
