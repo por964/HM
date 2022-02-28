@@ -11,6 +11,11 @@
 
 <body>
     <h3>Site2</h3>
+
+    {% for row in data%}
+        <h1>{{row.id}} {{row.name}}</h1>
+    {% endfor %}
+
 </body> 
 
 </html>

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for
+import json
 
 """ ----------------------------------------------------------------
 App Configuration:
@@ -18,8 +19,20 @@ def home():
 
 @app.route('/site2')
 def site2():
-    return render_template("site2.html")
-
+    data = [{
+        "id":1
+        ,"name":"name 1"
+    }
+    ,{
+        "id":2
+        ,"name":"name 2"
+    }
+    ,{
+        "id":3
+        ,"name":"name 3"
+    }
+    }]
+    return render_template("site2.html", data=data)
 
 """ ----------------------------------------------------------------
 Start:
