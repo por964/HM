@@ -13,12 +13,11 @@ Routes:
 -----------------------------------------------------------------""" 
 @app.route('/')
 def home():
-    #return render_template("home.html", text="Dette er en hest!!!")
     return redirect(url_for('site2'))
 
 
 @app.route('/site2')
-def site():
+def site2():
     return render_template("site2.html")
 
 
